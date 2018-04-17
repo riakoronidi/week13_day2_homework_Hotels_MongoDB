@@ -12,10 +12,32 @@ const getHotelsRequestComplete = function(allHotels){
   });
 }
 
+const createButtonClicked = function(event){
+  event.preventDefault();
+  console.log("Submit button clicked");
+
+  const hotelInputValue = document.querySelector("#name").value;
+  const buildingInputValue = document.querySelector("#building").value;
+
+  const quoteToSend = {
+    name: hotelInputValue,
+    building: buildingInputValue
+  };
+
+  request.post(createRequestComplete, quoteToSend);
+}
+
+const createRequestComplete = function(response){
+  console.log(response);
+  hotel.addHotel(response);
+}
+
 
 const appStart = function(){
   request.get(getHotelsRequestComplete);
 
+  const createHotelButton = document.querySelector("#submit-hotel");
+  createHotelButton.addEventListener("click", createButtonClicked);
 }
 
 document.addEventListener('DOMContentLoaded', appStart);
