@@ -17,7 +17,7 @@ Hotel.prototype.render = function(hotel){
     const ul = document.querySelector('#hotels');
     const li = document.createElement('li');
     const text = document.createElement('p');
-    text.innerText = `${hotel.name} - "${hotel.building}"`;
+    text.innerText = `Hotel ${hotel.name} has ${hotel.building} buildings`;
     li.appendChild(text);
     ul.appendChild(li);
 }
