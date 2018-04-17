@@ -1,0 +1,43 @@
+body, html{
+  height: 100%;
+  margin: 0;
+}
+
+.image-container{
+  background-image: url("http://www.retroactive-vintage-games.com/images/sid1172/P1010686.JPG");
+  height: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+li {
+  color: white;
+  font-family: arial
+  font-size: 16px
+  ;
+}
+
+.list-container {
+  width: 50%;
+  height:100px;
+}
